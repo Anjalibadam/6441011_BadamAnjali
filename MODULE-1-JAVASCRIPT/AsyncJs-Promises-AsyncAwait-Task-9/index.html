@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Async JS - Fetch Events</title>
+  <style>
+    #spinner {
+      display: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: blue;
+    }
+    #events {
+      margin-top: 20px;
+    }
+    .event {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Event List</h1>
+  <button onclick="fetchWithThen()">Fetch with .then()</button>
+  <button onclick="fetchWithAsync()">Fetch with async/await</button>
+
+  <div id="spinner">Loading events...</div>
+  <div id="events"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Handling - Community Portal</title>
+  <style>
+    .event-card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      background-color: #f4f4f4;
+    }
+    input, select {
+      margin: 10px 0;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎪 Community Events</h1>
+
+  <label>Filter by Category:
+    <select id="categoryFilter">
+      <option value="All">All</option>
+      <option value="Music">Music</option>
+      <option value="Art">Art</option>
+      <option value="Tech">Tech</option>
+    </select>
+  </label>
+
+  <br/>
+
+  <input type="text" id="searchInput" placeholder="Search by name (press Enter)" />
+
+  <div id="eventContainer"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
