@@ -1,0 +1,14 @@
+/* General text styles */
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Highlighted section */
+.highlight {
+  color: darkgreen;
+  font-weight: bold;
+  background-color: #e6ffe6;
+  padding: 10px;
+  border-left: 4px solid green;
+}

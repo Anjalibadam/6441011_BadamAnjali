@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Admin Table</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse; /* ✅ Collapses borders */
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc; /* ✅ Borders for all cells */
+      padding: 12px;
+      text-align: center;     /* ✅ Center text */
+    }
+
+    th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9; /* ✅ Zebra striping */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Upcoming Events - Admin Panel</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Community Clean-Up</td>
+        <td>June 5, 2025</td>
+        <td>Central Park</td>
+        <td>Confirmed</td>
+      </tr>
+      <tr>
+        <td>Food Drive</td>
+        <td>June 12, 2025</td>
+        <td>City Hall</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>Art in the Park</td>
+        <td>June 20, 2025</td>
+        <td>Riverside Area</td>
+        <td>Confirmed</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

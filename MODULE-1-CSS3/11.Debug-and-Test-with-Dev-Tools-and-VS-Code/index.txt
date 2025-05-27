@@ -1,0 +1,69 @@
+ Step 1: Simulate Different Screen Sizes
+Open Chrome DevTools
+
+Right-click on the page and select Inspect, or press Ctrl+Shift+I (Windows/Linux) or Cmd+Opt+I (Mac).
+
+Enable Device Toolbar
+
+Click the device icon in the top-left of DevTools or press Ctrl+Shift+M.
+
+Choose from pre-defined devices (like iPhone X, iPad, Galaxy S5) or add a custom device.
+
+Observe Layout
+
+Resize the viewport manually or choose different device presets.
+
+Watch for elements that overflow, overlap, or become unreadable.
+
+ Step 2: Inspect Styles and Test Live Changes
+Use the Elements Panel
+
+Select the Elements tab in DevTools.
+
+Click the element in the page or use the Inspector tool (top-left cursor icon) to select.
+
+Check CSS Rules
+
+In the Styles pane on the right:
+
+Review applied CSS.
+
+Identify media queries affecting the element.
+
+Toggle styles on/off using the checkboxes.
+
+Edit Styles Live
+
+Click any value to change it live (e.g., font-size, margin, display).
+
+Try alternate CSS properties to see if it fixes layout issues (e.g., flex-wrap, min-width, etc.).
+
+ Step 3: Check if External CSS is Loaded
+Go to Network Tab
+
+Open the Network tab in DevTools.
+
+Refresh the page (Ctrl+R or Cmd+R) to reload resources.
+
+Filter by CSS
+
+Type *.css or click the CSS filter to only show CSS files.
+
+Check for 200 status (OK) for all .css files.
+
+Watch for errors like 404 or blocked files.
+
+Verify Source in Response
+
+Click on the CSS file to view its content and ensure the expected styles are present.
+
+ Step 4: Sync with VS Code
+Open your project in VS Code
+
+Locate the affected CSS file
+
+Use live server or auto-reload plugin (like Live Server extension in VS Code).
+
+Update styles based on your live tests
+
+Use your findings from DevTools to fix and fine-tune your CSS.

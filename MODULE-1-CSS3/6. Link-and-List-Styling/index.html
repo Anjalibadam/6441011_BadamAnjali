@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Link and List Styling</title>
+  <style>
+    /* Reset some default styles */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    /* ✅ Link Styling */
+    a:link {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #663399;
+    }
+
+    a:hover {
+      color: #ff6600;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: red;
+    }
+
+    /* ✅ Navigation menu list styling */
+    nav ul {
+      list-style-type: none;              /* Remove bullets */
+      list-style-position: inside;        /* Set list position */
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 15px;
+      padding: 10px;
+    }
+
+    /* ✅ Regular list styling */
+    .features {
+      list-style-type: square;            /* Use square bullets */
+      list-style-position: outside;       /* Bullets outside */
+      padding-left: 20px;
+    }
+
+    .features li {
+      margin: 10px 0;                     /* Add spacing between items */
+      padding-left: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>City Council Portal</h1>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h2>Portal Features</h2>
+  <ul class="features">
+    <li>Responsive layout for mobile and desktop</li>
+    <li>Easy-to-navigate service sections</li>
+    <li>Interactive community event calendar</li>
+    <li>Real-time updates and notifications</li>
+  </ul>
+
+</body>
+</html>

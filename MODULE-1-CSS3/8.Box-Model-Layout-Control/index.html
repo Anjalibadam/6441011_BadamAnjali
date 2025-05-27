@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Box Model & Layout Control</title>
+  <style>
+    /* Style the event card with margin, padding, and border */
+    .eventCard {
+      border: 2px solid #4a90e2;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      background-color: #f0f8ff;
+      border-radius: 8px;
+      box-sizing: border-box; /* Includes border/padding in width */
+    }
+
+    /* Form fields with outline on focus */
+    input[type="text"], input[type="email"], select {
+      display: block;
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+      box-sizing: border-box;
+      transition: outline 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus {
+      outline: 3px solid #f39c12; /* Highlight with orange outline */
+      outline-offset: 2px;
+      border-color: #f39c12;
+    }
+
+    /* Visibility examples container */
+    .visibility-examples {
+      margin-top: 40px;
+      max-width: 400px;
+      padding: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+    }
+
+    /* Box to demonstrate visibility: hidden */
+    .hidden-box {
+      width: 100px;
+      height: 100px;
+      background: #3498db;
+      margin-bottom: 10px;
+      visibility: hidden; /* Still takes space but invisible */
+    }
+
+    /* Box to demonstrate display: none */
+    .none-box {
+      width: 100px;
+      height: 100px;
+      background: #e74c3c;
+      /* display: none;  Uncomment to hide completely */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="eventCard">
+    <h3>Community Picnic</h3>
+    <p>Join us for a fun day at the park with food and games.</p>
+  </div>
+
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your email address" />
+
+    <label for="event">Select Event:</label>
+    <select id="event" name="event">
+      <option>Community Picnic</option>
+      <option>Art Festival</option>
+      <option>Charity Run</option>
+    </select>
+  </form>
+
+  <div class="visibility-examples">
+    <h4>Visibility vs Display</h4>
+    <p>Blue box with <code>visibility: hidden;</code> (invisible but space remains):</p>
+    <div class="hidden-box"></div>
+
+    <p>Red box with <code>display: none;</code> (hidden and no space):</p>
+    <div class="none-box"></div>
+  </div>
+
+</body>
+</html>

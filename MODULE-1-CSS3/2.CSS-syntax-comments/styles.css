@@ -1,0 +1,82 @@
+/* =============================
+   Global Styles
+   ============================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================
+   Header Section
+   ============================= */
+header {
+  background-color: #004080;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style for navigation menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style for individual nav links */
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* =============================
+   Main Content Area
+   ============================= */
+main {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Style for section headings */
+h2 {
+  font-size: 28px;
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+/* Style for paragraphs */
+p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* =============================
+   Call-to-Action Button
+   ============================= */
+/* Style for main CTA button */
+.cta-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for CTA button */
+.cta-button:hover {
+  background-color: #0056b3;
+}
