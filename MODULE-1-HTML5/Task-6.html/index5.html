@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Feedback Form</title>
+  <style>
+    #event-image {
+      width: 200px;
+      transition: transform 0.3s ease;
+    }
+
+    #event-image.enlarged {
+      transform: scale(1.5);
+    }
+
+    #fee-display {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>Event Feedback Form</h2>
+
+  <!-- Phone number with onblur validation -->
+  <label for="phone">Phone Number:</label>
+  <input type="text" id="phone" onblur="validatePhone()" />
+  <span id="phone-error" class="error"></span>
+  <br><br>
+
+  <!-- Dropdown with onchange to show event fee -->
+  <label for="event">Select Event:</label>
+  <select id="event" onchange="displayFee()">
+    <option value="">--Select--</option>
+    <option value="100">Music Concert - $100</option>
+    <option value="50">Art Show - $50</option>
+    <option value="75">Tech Talk - $75</option>
+  </select>
+  <div id="fee-display"></div>
+  <br>
+
+  <!-- Submit button with onclick -->
+  <button onclick="confirmSubmission()">Submit Feedback</button>
+  <br><br>
+
+  <!-- Image with ondblclick to enlarge -->
+  <img id="event-image" src="https://via.placeholder.com/200" alt="Event Image"
+       ondblclick="enlargeImage()" />
+  <br><br>
+
+  <!-- Feedback textarea with keyboard character count -->
+  <label for="feedback">Your Feedback:</label><br>
+  <textarea id="feedback" rows="5" cols="40" onkeyup="countCharacters()"></textarea>
+  <div>Character count: <span id="char-count">0</span></div>
+
+  <script>
+    function validatePhone() {
+      const phone = document.getElementById("phone").value;
+      const error = document.getElementById("phone-error");
+      const phoneRegex = /^\d{10}$/;
+      if (!phoneRegex.test(phone)) {
+        error.textContent = "Please enter a valid 10-digit phone number.";
+      } else {
+        error.textContent = "";
+      }
+    }
+
+    function displayFee() {
+      const event = document.getElementById("event");
+      const feeDisplay = document.getElementById("fee-display");
+      const fee = event.value;
+      feeDisplay.textContent = fee ? `Event Fee: $${fee}` : '';
+    }
+
+    function confirmSubmission() {
+      alert("Thank you! Your feedback has been submitted.");
+    }
+
+    function enlargeImage() {
+      const img = document.getElementById("event-image");
+      img.classList.toggle("enlarged");
+    }
+
+    function countCharacters() {
+      const feedback = document.getElementById("feedback").value;
+      document.getElementById("char-count").textContent = feedback.length;
+    }
+  </script>
+</body>
+</html>

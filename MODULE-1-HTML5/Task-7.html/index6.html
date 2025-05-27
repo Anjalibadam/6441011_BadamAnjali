@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Promo Video</title>
+  <style>
+    #status {
+      font-weight: bold;
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome to Our Event!</h2>
+
+  <!-- Promo Video -->
+  <video id="promoVideo" width="480" controls oncanplay="videoReady()">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div id="status"></div>
+
+  <!-- Simple Form to simulate page activity -->
+  <h3>Quick Registration</h3>
+  <form id="eventForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email"><br><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    let isFormChanged = false;
+
+    function videoReady() {
+      document.getElementById("status").textContent = "🎬 Video ready to play!";
+    }
+
+    // Track if the form was interacted with
+    document.getElementById("eventForm").addEventListener("input", () => {
+      isFormChanged = true;
+    });
+
+    // Warn users before leaving if form is not submitted
+    window.onbeforeunload = function (e) {
+      if (isFormChanged) {
+        return "You have unsaved changes. Are you sure you want to leave?";
+      }
+    };
+
+    // Clear warning if form is submitted
+    document.getElementById("eventForm").addEventListener("submit", function () {
+      isFormChanged = false;
+    });
+  </script>
+</body>
+</html>
